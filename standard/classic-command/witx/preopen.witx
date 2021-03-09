@@ -1,0 +1,29 @@
+;; WASI Preopen support.
+;;
+;; Some content here is derived from [CloudABI](https://github.com/NuxiNL/cloudabi).
+;;
+;; This is a `witx` file. See [here](https://github.com/WebAssembly/WASI/tree/master/docs/witx.md)
+;; for an explanation of what that means.
+
+(use "typenames.witx")
+
+(module $wasi_ephemeral_fd
+  ;;; Linear memory to be accessed by WASI functions that need it.
+  (import "memory" (memory))
+
+  ;;; Return a description of the given preopened file descriptor.
+  (@interface func (export "prestat_get")
+    (param $fd $fd)
+    ;;; The buffer where the description is stored.
+    (result $error (expected $prestat (error $errno)))
+  )
+
+  ;;; Return a description of the given preopened file descriptor.
+  (@interface func (export "prestat_dir_name")
+    (param $fd $fd)
+    ;;; A buffer into which to write the preopened directory name.
+    (param $path (@witx pointer (@witx char8)))
+    (param $path_len $size)
+    (result $error (expected (error $errno)))
+  )
+)
