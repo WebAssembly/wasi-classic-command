@@ -1,26 +1,8 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4323447.svg)](https://doi.org/10.5281/zenodo.4323447)
-    
-# WebAssembly System Interface
+This wasi-classic-command proposal repo is no longer active.
 
-![WASI](WASI.png)
+See the [preview1 command ABI documentation].
 
-This repository is for the WebAssembly System Interface (WASI) Subgroup of the
-[WebAssembly Community Group]. It includes:
- - [charter]: describes the goals, scope and deliverables of the group
- - [docs]: learn more about WASI
- - [meetings]: schedules and agendas for video conference and in-person meetings
- - [phases]: the current WASI specifications
- - [proposals]: the status of each new specification proposal
+There will also be an official command World proposal for preview2, though
+at the time of this writing it doesn't exist yet.
 
-[charter]: Charter.md
-[docs]: docs/README.md
-[meetings]: meetings/README.md
-[phases]: phases/README.md
-[proposals]: docs/Proposals.md
-[WebAssembly Community Group]: https://www.w3.org/community/webassembly/
-
-### Contributing
-
-The [issue tracker] is the place to ask questions, make suggestions, and start discussions.
-
-[issue tracker]: https://github.com/WebAssembly/WASI/issues
+[preview1 command ABI documentation]: https://github.com/WebAssembly/WASI/blob/main/legacy/application-abi.md
